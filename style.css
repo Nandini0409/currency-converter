@@ -1,0 +1,226 @@
+:root {
+    --primaryColor: #fffcfa;
+    --secondryColor: #438043;
+    --tertioryColor: #b4a9a2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: var(--secondryColor);
+}
+
+
+/* styling of the svg icon------> */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+body {
+    background: var(--primaryColor);
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 45px;
+    line-height: 2.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.headerPara {
+    font-style: italic;
+    color: var(--secondryColor);
+    font-size: 1rem;
+}
+
+.box {
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    padding: 20px;
+    flex-direction: column;
+    width: min(650px, 90%);
+}
+
+section div {
+    display: flex;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currencySymbol {
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+}
+
+.infoBox {
+    width: 46%;
+    border: 1px solid var(--secondryColor);
+    padding: 8px 12px;
+    position: relative;
+    border-radius: 4px;
+}
+
+.amountBox{
+    text-align: right;
+    padding-right: 5px;
+}
+
+#outputAmount{
+    height: 25px;
+    width: 100%;
+}
+
+#currentExchangeRate{
+    height: 43px;
+}
+
+input {
+    border: none;
+    background-color: var(--primaryColor);
+    width: 100%;
+    padding: 2px 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border-radius: 4px;
+    border: none;
+    width: 47%;
+    padding: 8px 18px;
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+    background-color: var(--secondryColor);
+    
+}
+
+button:hover {
+    color: var(--secondryColor);
+    font-weight: 600;
+    background-color: var(--tertioryColor);
+    transition: ease 1ms;
+    cursor: pointer;
+}
+
+.CTA {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+select {
+    width: 70%;
+}
+
+select:focus {
+    overflow-y: visible;
+}
+
+.dropdownWithLabel {
+    width: 30%;
+}
+
+.selectElements {
+    display: flex;
+    justify-content: space-between;
+    flex: 2 1 2;
+}
+
+
+
+
+
+
+/* media queries-----> */
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .dropdownWithLabel {
+        width: 40%;
+    }
+
+    select {
+        width: 50%;
+    }
+
+}
+
+
+@media only screen and (max-width: 450px) {
+    h1{
+        font-size: 1.9rem;
+    }
+    .headerPara{
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+    .box{
+        text-align: left;
+    }
+    .selectElements {
+        flex-direction: column;
+    }
+    select{
+        width: 90%;
+    }
+    header{
+        padding: 0 10px;
+    }
+    section div{
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+    .infoBox{
+        width: 90%;
+    }
+    .CTA{
+        flex-direction: column;
+        gap: 6px;
+    }
+    button{
+        width: 90%;
+    }
+}
+
+/* design for tablets-----> */
+@media only screen and (min-width: 600px) and (max-width: 950px){
+    main{
+        height: 80vh;
+        align-items: center;
+    }
+
+    .box{
+        gap: 50px;
+    }
+}
