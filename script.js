@@ -90,7 +90,7 @@ function conversion() {
         })
         .then(data => {
             currentExchangeRate.innerHTML = `1 ${fromDropdownValue} = ${data.conversion_rate} ${toDropdownValue}`;
-            convertedAmount.textContent = Math.round(data.conversion_result);
+            convertedAmount.textContent = Math.round(data.conversion_result * 100) / 100;
         })
         .catch(error => {
             alert("Failed to fetch conversion rates. Please try again later.");
@@ -103,7 +103,7 @@ function conversion() {
 
 convertBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    let regex = /^\d*\.?\ ?\,?\d{0,2}$/;
+    let regex = /^\d*\.?\d{0,2}$/;
     let cleanedInput = inputAmount.value.replace(/[\s,]/g, '');
     if (cleanedInput === '') {
         alert("Please enter the Amount Before clicking the button!");
