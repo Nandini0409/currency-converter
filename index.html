@@ -30,7 +30,7 @@
                 <div>
                     <label for="inputAmount">Enter The Amount:</label>
                     <div class=" infoBox ">
-                        <input autocomplete="off" type="text" class="amountBox" placeholder="Enter the amount" id="inputAmount">
+                        <input autocomplete="off" type="text" class="amountBox" placeholder="" id="inputAmount">
                         <span class="currencySymbol" id="fromCurrencySymbol"></span>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div id="from" class="dropdownWithLabel">
                         <label for="fromDropdown">From:</label>
                         <select name="fromDropdown" id="fromDropdown">
-                            <option hidden>ISO codes</option>
+                            <option hidden>Currency</option>
                         </select>
                     </div>
                     <span class="material-symbols-outlined">
@@ -48,7 +48,7 @@
                     <div id="to" class="dropdownWithLabel">
                         <label for="toDropdown">To:</label>
                         <select id="toDropdown" name="toDropdown">
-                            <option hidden>ISO codes</option>
+                            <option hidden>Currency</option>
                         </select>
                     </div>
                 </div>
@@ -62,10 +62,10 @@
 
             <section class="convertedOutput">
                 <div>
-                    <p>Current Exchange Rate:</p>
+                    <p class="label">Current Exchange Rate:</p>
                     <p class="infoBox " id="currentExchangeRate"></p>
                 </div>
-                
+
                 <div>
                     <label for="outputAmount">Converted Amount:</label>
                     <div class="infoBox amountBox">

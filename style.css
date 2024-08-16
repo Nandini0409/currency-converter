@@ -1,7 +1,7 @@
 :root {
     --primaryColor: #fffcfa;
     --secondryColor: #438043;
-    --tertioryColor: #b4a9a2;
+    --tertioryColor: #f4e4d4;
 }
 
 * {
@@ -24,7 +24,6 @@
 
 body {
     background: var(--primaryColor);
-
 }
 
 main {
@@ -33,10 +32,11 @@ main {
     justify-content: center;
     align-items: center;
     margin: 40px 0;
-    text-align: center;
 }
 
+/* styling header---> */
 header {
+    text-align: center;
     margin-bottom: 45px;
     line-height: 2.5rem;
 }
@@ -48,17 +48,15 @@ h1 {
 
 .headerPara {
     font-style: italic;
-    color: var(--secondryColor);
-    font-size: 1rem;
 }
 
+
+/* styling the main box----> */
 .box {
     display: flex;
-    gap: 30px;
-    border: 1px solid transparent;
+    gap: 50px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border-radius: 4px;
-    padding: 20px;
+    padding: 30px;
     flex-direction: column;
     width: min(650px, 90%);
 }
@@ -66,14 +64,14 @@ h1 {
 section div {
     display: flex;
     width: 100%;
-    margin: 10px 0;
+    margin-bottom: 10px;
     justify-content: space-between;
     align-items: center;
 }
 
 .currencySymbol {
     position: absolute;
-    right: 0;
+    right: 10px;
     font-size: 1rem;
 }
 
@@ -83,16 +81,16 @@ section div {
     padding: 8px 12px;
     position: relative;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 .amountBox{
-    text-align: right;
     padding-right: 5px;
 }
 
 #outputAmount{
     height: 25px;
-    width: 100%;
+    width: 90%;
 }
 
 #currentExchangeRate{
@@ -102,14 +100,21 @@ section div {
 input {
     border: none;
     background-color: var(--primaryColor);
-    width: 100%;
+    width: 90%;
     padding: 2px 0;
+    font-size: inherit;
 }
 
 input:focus {
     outline: none;
 }
 
+label, .label{
+    font-weight: 500;
+}
+
+
+/* styling the CTAs----> */
 button {
     border-radius: 4px;
     border: none;
@@ -118,14 +123,15 @@ button {
     color: var(--primaryColor);
     font-size: 1.1rem;
     background-color: var(--secondryColor);
-    
+    border: 2px solid var(--secondryColor);
 }
 
 button:hover {
     color: var(--secondryColor);
+    background-color: var(--primaryColor);
+    border-radius: 12px;
     font-weight: 600;
-    background-color: var(--tertioryColor);
-    transition: ease 1ms;
+    transition: 3ms;
     cursor: pointer;
 }
 
@@ -135,23 +141,31 @@ button:hover {
     justify-content: space-between;
 }
 
-select {
-    width: 70%;
-}
 
-select:focus {
-    overflow-y: visible;
+/* styling the dropdowns-----> */
+.selectElements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dropdownWithLabel {
-    width: 30%;
+    width: 45%;
+    justify-content: space-between;
+    gap: 4px;
 }
 
-.selectElements {
-    display: flex;
-    justify-content: space-between;
-    flex: 2 1 2;
+select {
+    width: 80%;
+    border: 1px solid var(--secondryColor);
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 0.9rem;
 }
+
+
+
+
 
 
 
@@ -190,6 +204,9 @@ select:focus {
     .selectElements {
         flex-direction: column;
     }
+    .dropdownWithLabel{
+        width: 100%;
+    }
     select{
         width: 90%;
     }
@@ -210,6 +227,7 @@ select:focus {
     }
     button{
         width: 90%;
+        margin: auto;
     }
 }
 
@@ -218,9 +236,5 @@ select:focus {
     main{
         height: 80vh;
         align-items: center;
-    }
-
-    .box{
-        gap: 50px;
     }
 }
