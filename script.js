@@ -100,7 +100,6 @@ function conversion() {
 
 
 // eventlistners for CTAs----->
-
 convertBtn.addEventListener("click", (e) => {
     e.preventDefault();
     let regex = /^\d*\.?\d{0,2}$/;
