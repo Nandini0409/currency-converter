@@ -1,4 +1,4 @@
-# 🪙 Currency Converter
+# Currency Converter
 
 A web app built with **HTML, CSS & JavaScript** to convert currencies in real-time using a public API.
 
